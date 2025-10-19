@@ -1,0 +1,150 @@
+/* --- Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Layout --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Container --- */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+h1 {
+  color: #222;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* --- Form --- */
+.form-control {
+  position: relative;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* --- Floating Label --- */
+label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.25s ease;
+  background: #fff;
+  padding: 0 4px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 13px;
+  color: #6a11cb;
+}
+
+/* --- Button --- */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+/* --- Feedback Display --- */
+#feedback-display {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.feedback-entry {
+  background: #eef4ff;
+  border-left: 4px solid #6a11cb;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feedback-entry:hover {
+  background: #e1e9ff;
+}
+
+/* --- Texts --- */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 3px;
+  display: block;
+}
+
+#char-count {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
